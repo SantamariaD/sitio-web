@@ -3397,7 +3397,7 @@ video {
   content: "";
   height: 150%;
   width: 280px;
-  background-color: rgba(6, 216, 137, 0.2);
+  background-color: rgba(120, 10, 222, 0.2);
   position: absolute;
   top: -120px;
   left: 50%;
@@ -6385,7 +6385,7 @@ video {
   color: #B5B5B5;
 }
 .home5-process-area .single-process:hover .sl h2 {
-  -webkit-text-stroke: 1px rgba(6, 216, 137, 0.2);
+  -webkit-text-stroke: 1px rgba(120, 10, 222, 0.2);
 }
 .home5-process-area .single-process:hover .content h3 {
   color: var(--theme-color);
@@ -8552,7 +8552,7 @@ footer .footer-btm .footer-btn-content .footer-social ul li a:hover {
   color: #B5B5B5;
 }
 .home6-what-we-do-section .single-process:hover .sl h2 {
-  -webkit-text-stroke: 1px rgba(6, 216, 137, 0.2);
+  -webkit-text-stroke: 1px rgba(120, 10, 222, 0.2);
 }
 .home6-what-we-do-section .single-process:hover .content h3 {
   color: var(--theme-color);
@@ -8873,7 +8873,7 @@ footer .footer-btm .footer-btn-content .footer-social ul li a:hover {
   display: inline-block;
   padding: 8px 40px;
   position: relative;
-  background-color: rgba(6, 216, 137, 0.2);
+  background-color: rgba(120, 10, 222, 0.2);
   margin-bottom: 10px;
 }
 .breadcrumbs .breadcrumb-wrapper .breadcrumb-cnt > span::after {
