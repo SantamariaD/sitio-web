@@ -1646,7 +1646,7 @@ video {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: 0.5s;
+  transition: 0.1s;
   transform: rotate(45deg);
 }
 .banner-area3 .scroll-down span svg {
