@@ -9454,11 +9454,13 @@ footer .footer-btm .footer-btn-content .footer-social ul li a:hover {
   color: var(--white-color);
 }
 .portfolio-details .portfolio-details-sm-banner {
-  background-image: url(../img/inner-pages/portfolio-dt-06.png);
+  height: 500px;
+  background-image: url(../img/proyectos/formas\ de\ pago.png);
   background-size: cover;
   background-repeat: no-repeat;
   padding: 80px 30px 240px;
   border-radius: 20px;
+  margin-bottom: 15px;
 }
 .portfolio-details .portfolio-details-sm-banner .section-title-5 h2 {
   font-size: 40px;
@@ -11098,3 +11100,21 @@ footer .footer-btm .footer-btn-content .footer-social ul li a:hover {
   display: none;
   visibility: hidden;
 }/*# sourceMappingURL=style2.css.map */
+
+.boton-comprar {
+  width:  200px;
+  height: 50px;
+  margin: 15px auto;
+  color: white;
+  background-color: var(--theme-color);
+  text-align: center;
+  padding: auto 10px;
+  padding-top: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all ease 0.7s;
+}
+
+.boton-comprar:hover {
+  opacity: 0.8;
+}
