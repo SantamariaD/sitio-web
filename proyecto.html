@@ -26,15 +26,14 @@
     <link rel="stylesheet" href="assets/css/preloader.css" />
     <link rel="stylesheet" href="assets/css/style2.css" />
     <!-- Title -->
-    <title>
-      Softconic- Software Agency and creative IT solution HTML Template
-    </title>
+    <title>Software</title>
     <link
       rel="icon"
       href="assets/img/sm-logo.svg"
       type="image/gif"
       sizes="20x20"
     />
+    <script src="https://www.paypal.com/sdk/js?client-id=AcsFR3Jne2hJYWkgvB5dpq20GbW1XeezxtiYC7COzKb8yhZfu-nTK4cf6W3yl5P45_M66VMJ6GPzYnzS&currency=MXN"></script>
   </head>
 
   <body class="home-dark2 tt-magic-cursor">
@@ -167,7 +166,7 @@
       </div>
     </div>
     <!-- Start header section -->
-    <header class="header-area2">
+    <header class="header-area2" style="z-index: 1000">
       <div class="header-logo">
         <a href="index.html"
           ><img alt="image" class="img-fluid" src="assets/img/logo.svg"
@@ -451,6 +450,9 @@
             </div>
           </div>
           <div class="col-lg-4">
+            <div class="portfolio-details-sm-banner">
+              <div class="section-title-5"></div>
+            </div>
             <div class="portfolio-info">
               <ul>
                 <li>
@@ -463,7 +465,7 @@
                 </li>
                 <li>
                   <span>Precio:</span>
-                  <h5>$699 MXN + IVA</h5>
+                  <h5>$850 MXN, IVA incluido</h5>
                 </li>
                 <li>
                   <span>Compatibilidad:</span>
@@ -475,12 +477,7 @@
                 </li>
               </ul>
             </div>
-            <div class="portfolio-details-sm-banner">
-              <div class="section-title-5"></div>
-            </div>
-            <div class="boton-comprar">
-                COMPRAR
-            </div>
+            <div id="paypal-button-container" style="color: white;"></div>
           </div>
         </div>
       </div>
@@ -686,6 +683,8 @@
     </footer>
     <!-- End Footer section -->
 
+    <!--PayPal-->
+    <script src="./assets/js/paypal.js"></script>
     <!--  Main jQuery  -->
     <script src="assets/js/jquery-3.6.0.min.js"></script>
     <!-- Popper and Bootstrap JS -->

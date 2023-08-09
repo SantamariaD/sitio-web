@@ -9454,12 +9454,13 @@ footer .footer-btm .footer-btn-content .footer-social ul li a:hover {
   color: var(--white-color);
 }
 .portfolio-details .portfolio-details-sm-banner {
-  height: 554px;
+  height: 500px;
   background-image: url(../img/proyectos/formas\ de\ pago.png);
   background-size: cover;
   background-repeat: no-repeat;
   padding: 80px 30px 240px;
   border-radius: 20px;
+  margin-bottom: 15px;
 }
 .portfolio-details .portfolio-details-sm-banner .section-title-5 h2 {
   font-size: 40px;
