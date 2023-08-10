@@ -33,7 +33,7 @@
       type="image/gif"
       sizes="20x20"
     />
-    <script src="https://www.paypal.com/sdk/js?client-id=AcsFR3Jne2hJYWkgvB5dpq20GbW1XeezxtiYC7COzKb8yhZfu-nTK4cf6W3yl5P45_M66VMJ6GPzYnzS&currency=MXN"></script>
+    <script src="https://www.paypal.com/sdk/js?client-id=AcsFR3Jne2hJYWkgvB5dpq20GbW1XeezxtiYC7COzKb8yhZfu-nTK4cf6W3yl5P45_M66VMJ6GPzYnzS&currency=MXN&locale=es_MX"></script>
   </head>
 
   <body class="home-dark2 tt-magic-cursor">
@@ -95,9 +95,9 @@
       </div>
       <div class="sidebar-content">
         <p>
-          Duis a orci nunc. Suspendisse ac convallis sapien, quis commodo
-          libero. Donec nec duomoi luctus, pellentesque lacus sed, mollis going
-          leo.
+          En TechCode, creamos sueños a través de la tecnología y la
+          creatividad. Si tienes una idea emocionante para un proyecto, estamos
+          aquí para convertirla en realidad.
         </p>
       </div>
       <div class="address-card">
@@ -105,22 +105,11 @@
           <div class="informations">
             <div class="single-info">
               <div class="icon">
-                <i class="fas fa-map-marker-alt"></i>
-              </div>
-              <div class="info">
-                <p>
-                  168/170, Avenue 01, Old York Drive Rich Mirpur DOHS,
-                  Bangladesh
-                </p>
-              </div>
-            </div>
-            <div class="single-info">
-              <div class="icon">
                 <i class="fas fa-phone-alt"></i>
               </div>
               <div class="info">
-                <a href="tel:05661111985">+880 566 1111 985</a>
-                <a href="tel:06571111576">+880 657 1111 576</a>
+                <a href="tel:05661111985">55 4891 1226</a>
+                <a href="tel:06571111576">55 8677 1252</a>
               </div>
             </div>
             <div class="single-info">
@@ -128,8 +117,9 @@
                 <i class="far fa-envelope"></i>
               </div>
               <div class="info">
-                <a href="mailto: info@example.com">info@example.com</a>
-                <a href="mailto: info@support.com">info@support.com</a>
+                <a href="mailto: info@example.com"
+                  >techcode.informacion@gmail.com</a
+                >
               </div>
             </div>
           </div>
@@ -137,8 +127,8 @@
         <!-- <img src="assets/images/bg/office1.png" alt="image"> -->
       </div>
       <div class="follow-area">
-        <h5 class="blog-widget-title">Follow Us</h5>
-        <p class="para">Follow us on Social Network</p>
+        <h5 class="blog-widget-title">Siguenos</h5>
+        <p class="para">Siguenos en Nuestra Redes Sociales</p>
         <div class="blog-widget-body">
           <ul class="follow-list d-flex flex-row align-items-start gap-4">
             <li>
@@ -147,18 +137,8 @@
               ></a>
             </li>
             <li>
-              <a href="https://www.twitter.com/"
-                ><i class="bx bxl-twitter"></i
-              ></a>
-            </li>
-            <li>
               <a href="https://www.instagram.com/"
                 ><i class="bx bxl-instagram"></i
-              ></a>
-            </li>
-            <li>
-              <a href="https://www.pinterest.com/"
-                ><i class="bx bxl-pinterest"></i
               ></a>
             </li>
           </ul>
@@ -404,7 +384,10 @@
                 <h3>Adquierelo</h3>
                 <div class="row g-4 justify-content-center">
                   <div class="col-xl-4 col-sm-6">
-                    <div class="single-process magnetic-item">
+                    <div
+                      class="single-process magnetic-item"
+                      style="height: 320px"
+                    >
                       <div class="icon">
                         <img src="assets/img/inner-pages/research.svg" alt="" />
                       </div>
@@ -417,7 +400,10 @@
                     </div>
                   </div>
                   <div class="col-xl-4 col-sm-6">
-                    <div class="single-process magnetic-item">
+                    <div
+                      class="single-process magnetic-item"
+                      style="height: 320px"
+                    >
                       <div class="icon">
                         <img
                           src="assets/img/inner-pages/devlopment.svg"
@@ -433,7 +419,10 @@
                     </div>
                   </div>
                   <div class="col-xl-4 col-sm-6">
-                    <div class="single-process magnetic-item">
+                    <div
+                      class="single-process magnetic-item"
+                      style="height: 320px"
+                    >
                       <div class="icon">
                         <img src="assets/img/inner-pages/deploy.svg" alt="" />
                       </div>
@@ -477,7 +466,38 @@
                 </li>
               </ul>
             </div>
-            <div id="paypal-button-container" style="color: white;"></div>
+            <div class="paypal">
+              <div id="paypal-button-container"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Modal de pagado-->
+    <div id="modalPagoCorrecto" class="modal">
+      <div class="modal-contenido">
+        <div class="modal-contenido-informacion">
+          <div class="modal-contenido-informacion-texto">
+            <div class="modal-contenido-informacion-imagen">
+              <img src="./assets/img/modal/cheque.png" alt="pago correcto" />
+            </div>
+            <p class="modal-contenido-informacion-gracia">
+              <strong>¡Gracias por su compra!</strong>
+            </p>
+          </div>
+          <p class="modal-contenido-informacion-parrafo">
+            Su compra se realizo de forma correcta, el ticket de compra se
+            envíara a su correo electrónico.
+            <br />
+            Puede descargar el software dando click en el botón. Cualquier duda
+            o aclaración puede ponerse encontacto con nosotros a
+            techcode.informacion@gmail.com
+          </p>
+          <div
+            id="cerrarModalPagoCorrecto"
+            class="modal-contenido-informacion-boton"
+          >
+            <button>Descargar</button>
           </div>
         </div>
       </div>
@@ -516,8 +536,9 @@
                     </svg>
                   </div>
                   <div class="content">
-                    <span>Call Any Time</span>
-                    <h6><a href="tel: 29658718617">2-965-871-8617</a></h6>
+                    <span>Caontactanos en cualquier momento</span>
+                    <h6><a href="tel: 29658718617">55 4891 1226</a></h6>
+                    <h6><a href="tel: 29658718617">55 8677 1252</a></h6>
                   </div>
                 </div>
               </div>
@@ -532,24 +553,6 @@
               <div class="footer-contact mb-40">
                 <h4>
                   <svg
-                    width="14"
-                    height="20"
-                    viewBox="0 0 14 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M12.9213 3.4249C11.7076 1.33021 9.55162 0.0504883 7.15416 0.00158203C7.05181 -0.000527344 6.9488 -0.000527344 6.84642 0.00158203C4.449 0.0504883 2.29306 1.33021 1.07923 3.4249C-0.161468 5.566 -0.195414 8.13787 0.988414 10.3047L5.94791 19.3823C5.95013 19.3863 5.95236 19.3904 5.95466 19.3944C6.17287 19.7736 6.56377 20 7.00037 20C7.43693 20 7.82783 19.7736 8.04599 19.3944C8.0483 19.3904 8.05052 19.3863 8.05275 19.3823L13.0122 10.3047C14.196 8.13787 14.162 5.566 12.9213 3.4249ZM7.00029 9.06252C5.44947 9.06252 4.18779 7.80084 4.18779 6.25002C4.18779 4.6992 5.44947 3.43752 7.00029 3.43752C8.55111 3.43752 9.81279 4.6992 9.81279 6.25002C9.81279 7.80084 8.55115 9.06252 7.00029 9.06252Z"
-                    />
-                  </svg>
-                  Address
-                </h4>
-                <a href="#"
-                  >House 168/170, Avenue 01, Mirpur DOHS, Dhaka Bangladesh</a
-                >
-              </div>
-              <div class="footer-contact mb-40">
-                <h4>
-                  <svg
                     width="20"
                     height="20"
                     viewBox="0 0 20 20"
@@ -559,29 +562,11 @@
                       d="M7.29163 14.6767V18.5417C7.29227 18.6731 7.33422 18.8009 7.41154 18.9071C7.48886 19.0133 7.59764 19.0924 7.72245 19.1334C7.84727 19.1743 7.9818 19.1749 8.10699 19.1351C8.23217 19.0954 8.34167 19.0172 8.41997 18.9117L10.6808 15.8351L7.29163 14.6767ZM19.7375 0.115895C19.6436 0.0490233 19.533 0.00942685 19.418 0.00148505C19.303 -0.00645676 19.188 0.0175656 19.0858 0.0708953L0.3358 9.86256C0.227918 9.91958 0.13903 10.0069 0.0800422 10.1137C0.0210548 10.2205 -0.00546466 10.3422 0.00373833 10.4639C0.0129413 10.5855 0.0574664 10.7019 0.131849 10.7986C0.206232 10.8953 0.307236 10.9683 0.422467 11.0084L5.63497 12.7901L16.7358 3.2984L8.1458 13.6476L16.8816 16.6334C16.9683 16.6625 17.0603 16.6723 17.1512 16.6622C17.2421 16.652 17.3296 16.6221 17.4078 16.5746C17.4859 16.527 17.5526 16.463 17.6034 16.3869C17.6542 16.3108 17.6877 16.2246 17.7016 16.1342L19.9933 0.717562C20.0103 0.603437 19.9953 0.486844 19.9502 0.380665C19.905 0.274486 19.8314 0.182855 19.7375 0.115895Z"
                     />
                   </svg>
-                  Say Hello
+                  Mandanos un Mensaje
                 </h4>
-                <a href="mailto:ifo@example.com">ifo@example.com</a><br />
-                <a href="mailto:info@support.com">info@support.com</a>
-              </div>
-              <div class="footer-contact">
-                <h6>See Our New updates</h6>
-                <form>
-                  <div class="form-inner">
-                    <input type="text" placeholder="Email here..." />
-                    <button type="submit">
-                      <svg
-                        width="17"
-                        height="17"
-                        viewBox="0 0 13 13"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path d="M0 1H12M12 1V13M12 1L0.5 12"></path>
-                      </svg>
-                    </button>
-                  </div>
-                </form>
+                <a href="mailto:ifo@example.com"
+                  >techcode.informacion@gmail.com</a
+                ><br />
               </div>
             </div>
           </div>
@@ -590,16 +575,18 @@
           >
             <div class="footer-widget">
               <div class="widget-title">
-                <h4>Our Solutions</h4>
+                <h4>Nuestras Soluciones</h4>
               </div>
               <div class="menu-container">
                 <ul>
-                  <li><a href="service.html">Web Development</a></li>
-                  <li><a href="service.html">Mobile Development</a></li>
-                  <li><a href="service.html">Cloud Services</a></li>
-                  <li><a href="service.html">Network Connectivity</a></li>
-                  <li><a href="service.html">Data analytics</a></li>
-                  <li><a href="service.html">Software Development</a></li>
+                  <li><a href="desarrollo-web.html">Desarrollo Web</a></li>
+                  <li><a href="movil.html">Desarrollo Móvi</a></li>
+                  <li>
+                    <a href="soluciones-nube.html">Soluciones en la Nube</a>
+                  </li>
+                  <li><a href="software.html">Desarrollo de Software</a></li>
+                  <li><a href="analisis-datos.html">Análisis de Datos</a></li>
+                  <li><a href="ciberseguridad.html">Ciberseguridad</a></li>
                 </ul>
               </div>
             </div>
@@ -607,16 +594,14 @@
           <div class="col-lg-2 col-sm-6 d-flex justify-content-lg-center">
             <div class="footer-widget">
               <div class="widget-title">
-                <h4>Company</h4>
+                <h4>Compañia</h4>
               </div>
               <div class="menu-container">
                 <ul>
-                  <li><a href="conocenos.html">About Us</a></li>
-                  <li><a href="case-study.html">Case Study</a></li>
-                  <li><a href="blog.html">News & Article</a></li>
-                  <li><a href="team1.html">Our Team</a></li>
-                  <li><a href="project.html">All Portfolio</a></li>
-                  <li><a href="pricing.html">Pricing Plan</a></li>
+                  <li><a href="conocenos.html">Conócenos</a></li>
+                  <li><a href="blog.html">Noticias y Articulos</a></li>
+                  <li><a href="proyecto.html">Nuestra Aplicación</a></li>
+                  <li><a href="pricing.html">Precios</a></li>
                 </ul>
               </div>
             </div>
@@ -624,16 +609,14 @@
           <div class="col-lg-3 col-sm-6 d-flex justify-content-sm-end">
             <div class="footer-widget">
               <div class="widget-title">
-                <h4>Resources</h4>
+                <h4>Recursos</h4>
               </div>
               <div class="menu-container">
                 <ul>
-                  <li><a href="#">Support Area</a></li>
-                  <li><a href="#">Support Policy</a></li>
-                  <li><a href="#">Terms & Conditions</a></li>
-                  <li><a href="#">Privacy Policy</a></li>
-                  <li><a href="#">Career</a></li>
-                  <li><a href="pricing.html">Pricing Plan</a></li>
+                  <li><a href="#">Área de soporte</a></li>
+                  <li><a href="#">Términos y condiciones</a></li>
+                  <li><a href="#">Aviso de privacidad</a></li>
+                  <li><a href="pricing.html">Precios</a></li>
                 </ul>
               </div>
             </div>
@@ -646,10 +629,7 @@
             <div class="col-lg-12">
               <div class="footer-btn-content">
                 <div class="copyright-area">
-                  <p>
-                    ©Copyright 2023 <a href="#">Softconic</a> | Design By
-                    <a href="https://www.egenslab.com/">Egens Lab</a>
-                  </p>
+                  <p>©Copyright 2023 <a href="#">TechCode</a></p>
                 </div>
                 <div class="footer-social">
                   <ul>
