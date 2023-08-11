@@ -11935,7 +11935,7 @@ footer .footer-btm .footer-btn-content .footer-social ul li a:hover {
 }
 
 .paypal {
-  background: hsl(0, 0%, 11%,.8) !important;
+  background: hsl(0, 0%, 11%, 0.8) !important;
   height: auto;
   width: 100%;
   padding: 15px 20px;
@@ -11944,7 +11944,6 @@ footer .footer-btm .footer-btn-content .footer-social ul li a:hover {
     color: white !important;
   }
 }
-
 
 #root {
   background: white !important;
@@ -12012,7 +12011,7 @@ footer .footer-btm .footer-btn-content .footer-social ul li a:hover {
   justify-content: center;
 }
 
-.modal-contenido-informacion-imagen{
+.modal-contenido-informacion-imagen {
   width: 50px;
   height: 50px;
 }
@@ -12034,8 +12033,8 @@ footer .footer-btm .footer-btn-content .footer-social ul li a:hover {
   color: rgb(149, 149, 149);
 }
 
-.modal-contenido-informacion-boton, 
-.modal-contenido-informacion-boton button{
+.modal-contenido-informacion-boton,
+.modal-contenido-informacion-boton button {
   width: 250px;
   font-size: 18px;
   background: var(--theme-color);
@@ -12049,7 +12048,7 @@ footer .footer-btm .footer-btn-content .footer-social ul li a:hover {
   width: 100%;
   height: 60px;
   pad: 15px;
-  background: rgba(82, 196, 26, .2);
+  background: rgba(82, 196, 26, 0.2);
   border: 1px solid #b7eb8f;
   font-size: 16px;
   text-align: center;
@@ -12062,7 +12061,7 @@ footer .footer-btm .footer-btn-content .footer-social ul li a:hover {
   width: 100%;
   height: 60px;
   pad: 15px;
-  background: rgba(255, 77, 79, .2);
+  background: rgba(255, 77, 79, 0.2);
   border: 1px solid #ffccc7;
   font-size: 16px;
   text-align: center;
@@ -12082,6 +12081,11 @@ footer .footer-btm .footer-btn-content .footer-social ul li a:hover {
   transition: all ease 0.7s;
 }
 
+.mostrar-mensaje-error-contra {
+  display: block;
+  transition: all ease 0.7s;
+}
+
 .ocultar-mensaje-correcto {
   display: none;
   transition: all ease 0.7s;
@@ -12092,3 +12096,46 @@ footer .footer-btm .footer-btn-content .footer-social ul li a:hover {
   transition: all ease 0.7s;
 }
 
+.ocultar-mensaje-error-contra {
+  display: none;
+  transition: all ease 0.7s;
+}
+
+.boton-desactivado {
+  font-size: 17px;
+  font-weight: 700;
+  padding: 12px 62px;
+  border: none;
+  margin-top: 20px;
+  background: rgb(192, 192, 192);
+  color: rgb(150, 150, 150);
+  cursor: not-allowed;
+}
+
+.spin-button {
+  font-size: 16px;
+  background-color: transparent;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 50%;
+  border-bottom: 5px solid #ffffff;
+  height: 25px;
+  width: 25px;
+  cursor: pointer;
+  margin-right: 7px;
+  animation: spin .7s linear infinite;
+  display: none;
+}
+
+.spin-activo {
+  display: inline-block;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
