@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="assets/css/preloader.css" />
     <link rel="stylesheet" href="assets/css/style2.css" />
     <!-- Title -->
-    <title>Presupuesto</title>
+    <title>Registro</title>
     <link
       rel="icon"
       href="assets/img/sm-logo.svg"
@@ -247,72 +247,25 @@
       </div>
     </header>
     <!-- End header section -->
-    <!-- Start breadcrumbs section -->
-    <section class="breadcrumbs">
-      <div class="breadcrumb-sm-images">
-        <div class="inner-banner-1 magnetic-item">
-          <img src="assets/img/contactanos/presupuesto.jpg" alt="presupuesto" />
-        </div>
-        <div class="inner-banner-2 magnetic-item">
-          <img src="assets/img/contactanos/contacto.jpg" alt="contactanos" />
-        </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="breadcrumb-wrapper">
-              <div class="breadcrumb-cnt">
-                <span>Presupuestos</span>
-                <h1>"Para cualquier pregunta"</h1>
-                <div class="breadcrumb-list">
-                  <a href="index.html">Home</a
-                  ><img
-                    src="assets/img/inner-pages/breadcrumb-arrow.svg"
-                    alt=""
-                  />
-                  Presupuestos
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+
     <!-- End breadcrumbs section -->
     <div class="contact-page-wrap sec-mar">
       <div class="container">
         <div class="row g-lg-4 gy-5">
           <div class="col-lg-6">
             <div class="contact-content">
-              <span>Ponte en Contacto con Nosotros</span>
-              <h2>¿Trabajamos Juntos?</h2>
+              <span>Realizá tu Registro</span>
+              <h2>¿Quieres más Software?</h2>
               <p>
-                Ofrecemos un servicio de primera clase y flexible para proyectos de
-                desarrollo de software a través de correo electrónico y
-                teléfono. Garantizo que podrás resolver cualquier consulta en un
-                plazo de 24 horas.
+                El registro de usuarios con nosotros ofrece beneficios
+                fundamentales. Permite una experiencia personalizada,
+                comunicación directa para actualizaciones y soporte,
+                implementación de medidas de seguridad sólidas, rastreo
+                eficiente de actividades y resolución de problemas. Esto
+                fortalece nuestra relación, optimizando nuestros servicios de
+                consultoría en tecnología de la información para satisfacer las
+                necesidades únicas de cada cliente.
               </p>
-              <div class="informations">
-                <div class="single-info">
-                  <div class="icon">
-                    <i class="fas fa-phone-alt"></i>
-                  </div>
-                  <div class="info">
-                    <a href="tel:05661111985">55 4891 1226</a>
-                    <a href="tel:06571111576">55 8677 1252</a>
-                  </div>
-                </div>
-                <div class="single-info">
-                  <div class="icon">
-                    <i class="far fa-envelope"></i>
-                  </div>
-                  <div class="info">
-                    <a href="mailto: info@example.com"
-                      >techcode.informacion@gmail.com</a
-                    >
-                  </div>
-                </div>
-              </div>
               <div class="follow-area">
                 <h5 class="blog-widget-title">Siguenos</h5>
                 <p class="para">Siguenos en Nuestras RedesSociales</p>
@@ -338,50 +291,73 @@
           <div class="col-lg-6">
             <div class="contact-form-wrap">
               <div class="form-tltle">
-                <h5>Presupuestos Totalmente Sin Compromiso</h5>
+                <h5>Formulario de Registro</h5>
               </div>
               <div class="contact-form">
                 <form id="formContacto">
                   <div class="row">
                     <div class="col-lg-12 mb-20">
                       <div class="form-inner">
-                        <label>Nombre</label>
+                        <label>*Nombre</label>
                         <input type="text" id="nombre" required />
                       </div>
                     </div>
                     <div class="col-lg-12 mb-20">
                       <div class="form-inner">
-                        <label>Correo Electrónico</label>
-                        <input type="email" id="correo" />
+                        <label>*Correo Electrónico</label>
+                        <input type="email" id="correo" required />
                       </div>
                     </div>
                     <div class="col-lg-12 mb-20">
                       <div class="form-inner">
-                        <label>Teléfono</label>
-                        <input type="number" id="telefono" />
+                        <label
+                          >*Nombre de Usuario (Sin espacios ni
+                          caractéres)</label
+                        >
+                        <input type="text" id="nombreUsuario" required />
                       </div>
                     </div>
                     <div class="col-lg-12 mb-20">
                       <div class="form-inner">
-                        <label>Mensaje</label>
-                        <textarea id="mensaje" required></textarea>
+                        <label>*Contraseña</label>
+                        <input type="password" id="contrasena" required />
                       </div>
                     </div>
                     <div class="col-lg-12 mb-20">
-                      <p id="mensajeCorrecto" class="mensaje-correcto">
-                       <strong> !Gracias¡ </strong><br/>
-                        En breve nos pondremos en contacto.
-                      </p>
+                      <div class="form-inner">
+                        <label>*Repite la Contraseña</label>
+                        <input
+                          type="password"
+                          id="contrasenaRepetir"
+                          required
+                        />
+                      </div>
                     </div>
                     <div class="col-lg-12 mb-20">
-                      <p id="mensajeError" class="mensaje-error">
-                        Hubo un error intene nuevamente.
-                      </p>
+                      <div class="form-inner">
+                        <label>* Campos obligatorios</label>
+                      </div>
                     </div>
+                    <p id="mensajeCorrecto" class="mensaje-correcto">
+                      <strong> !Registro Exitoso </strong><br />
+                      REcibiras un correo para verificar su cuenta.
+                    </p>
+                    <p id="mensajeError" class="mensaje-error">
+                      Hubo un error intene nuevamente.
+                    </p>
+
+                    <p id="mensajeErrorContrasenas" class="mensaje-error">
+                        No coinciden las contraseñas.
+                      </p>
                     <div class="col-lg-12">
                       <div class="form-inner">
-                        <button class="primary-btn3" id="botonEnviar">
-                          Enviar
+                        <button
+                          class="boton-desactivado"
+                          id="botonRegistrar"
+                          disabled
+                        >
+                        <span id="spiner" class="spin-button"></span>
+                          Registrarse
                         </button>
                       </div>
                     </div>
@@ -554,8 +530,8 @@
     </footer>
     <!-- End Footer section -->
 
-    <!--  Contacto JS  -->
-    <script src="assets/js/contacto.js"></script>
+    <!--  Registro JS  -->
+    <script src="assets/js/registro.js"></script>
     <!--  Main jQuery  -->
     <script src="assets/js/jquery-3.6.0.min.js"></script>
     <!-- Popper and Bootstrap JS -->

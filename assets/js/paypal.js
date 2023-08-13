@@ -1,9 +1,16 @@
+// MOSTRAR MODAL DE EXITO
+const modalPagoCorrecto = document.getElementById("modalPagoCorrecto");
+const cerrarModalPagoCorrecto = document.getElementById(
+  "cerrarModalPagoCorrecto"
+);
+
 paypal
   .Buttons({
     // Estilo de los botones
     style: {
       color: "blue",
-      label: "pay"
+      label: "pay",
+      background: "white",
     },
     // Call your server to set up the transaction
     createOrder: function (data, actions) {
@@ -30,13 +37,13 @@ paypal
           return res.json();
         })
         .then(function (orderData) {
-          // Three cases to handle:
-          //   (1) Recoverable INSTRUMENT_DECLINED -> call actions.restart()
-          //   (2) Other non-recoverable errors -> Show a failure message
-          //   (3) Successful transaction -> Show confirmation or thank you
+          // Tres casos para manejar:
+          // (1) INSTRUMENT_DECLINED recuperable -> llamar a actions.restart()
+          // (2) Otros errores no recuperables -> Mostrar un mensaje de fallo
+          // (3) Transacción exitosa -> Mostrar confirmación o agradecimiento
 
-          // This example reads a v2/checkout/orders capture response, propagated from the server
-          // You could use a different API or structure for your 'orderData'
+          // Este ejemplo lee una respuesta de captura de órdenes v2/checkout/orders, propagada desde el servidor.
+          // Podrías utilizar una API o estructura diferente para tus 'orderData'.
           var detalleError =
             Array.isArray(orderData.details) && orderData.details[0];
 
@@ -56,12 +63,22 @@ paypal
           // Successful capture! For demo purposes:
           console.log("Capture result", orderData);
 
-          // Replace the above to show a success message within this page, e.g.
-          // const element = document.getElementById('paypal-button-container');
-          // element.innerHTML = '';
-          // element.innerHTML = '<h3>Thank you for your payment!</h3>';
-          // Or go to another URL:  actions.redirect('thank_you.html');
+          modalPagoCorrecto.classList.add("mostrar-modal");
+          modalPagoCorrecto.classList.remove("ocultar-modal");
+          // Obtén una referencia al elemento, por ejemplo:
+          // const elemento = document.getElementById('paypal-button-container');
+          // Vacía el contenido existente del elemento
+          // elemento.innerHTML = '';
+          // Agrega un nuevo contenido que muestre el mensaje de agradecimiento
+          // elemento.innerHTML = '<h3>¡Gracias por tu pago!</h3>';
+          // O ve a otra URL:  actions.redirect('gracias.html');
         });
     },
   })
   .render("#paypal-button-container");
+
+// Funciones despues del pago
+cerrarModalPagoCorrecto.addEventListener("click", () => {
+  modalPagoCorrecto.classList.add("ocultar-modal");
+  modalPagoCorrecto.classList.remove("mostrar-modal");
+});
