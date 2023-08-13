@@ -11055,6 +11055,14 @@ footer .footer-btm .footer-btn-content .footer-social ul li a:hover {
   margin-bottom: 0;
   text-align: center;
 }
+.faq-page .contact-form-wrap .form-tltle h3 {
+  font-family: var(--font-saira);
+  font-weight: 500;
+  font-size: 22px;
+  color: var(--white-color);
+  margin-bottom: 0;
+  text-align: center;
+}
 .faq-page .contact-form-wrap .contact-form {
   padding: 40px 20px;
 }
