@@ -14,7 +14,7 @@ paypal
     },
     // Call your server to set up the transaction
     createOrder: function (data, actions) {
-      return fetch("http://127.0.0.1:8000/api/paypal/generar-orden", {
+      return fetch("https://api-sitio-web.techcode.tech/api/paypal/generar-orden", {
         method: "get",
       })
         .then(function (res) {
@@ -28,7 +28,7 @@ paypal
     // Call your server to finalize the transaction
     onApprove: function (data, actions) {
       return fetch(
-        "http://127.0.0.1:8000/api/paypal/guardar-orden/" + data.orderID,
+        "https://api-sitio-web.techcode.tech/api/paypal/guardar-orden/" + data.orderID,
         {
           method: "get",
         }
