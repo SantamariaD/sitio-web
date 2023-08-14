@@ -8,14 +8,14 @@ botonEnviar.addEventListener("click", function (event) {
   let nombre = document.getElementById("nombre").value;
   let correo = document.getElementById("correo").value;
   let telefono = document.getElementById("telefono").value;
-  let mensaje = document.getElementById("mensaje").value;
+  let comentario = document.getElementById("mensaje").value;
 
-  if (nombre && correo && mensaje) {
+  if (nombre && correo && comentario) {
     const contactoForm = {
       nombre,
       correo,
       telefono,
-      mensaje,
+      comentario,
     };
     document.getElementById("nombre").value = "";
     document.getElementById("correo").value = "";
@@ -26,33 +26,42 @@ botonEnviar.addEventListener("click", function (event) {
 });
 
 const guardarContacto = (contactoForm) => {
-  const url = "https://api-sitio-web.techcode.tech/api/contactos/guardar"; 
+  const url = enviroments.urlBase + "/api/contactos/guardar";
 
-  fetch(url, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(contactoForm),
-  })
-    .then((response) => response.json())
-    .then((data) => {
-      mensajeCorrecto.classList.add("mostrar-mensaje-correcto")
-      mensajeCorrecto.classList.remove("ocultar-mensaje-correcto")
-
-      setTimeout(() => {
-        mensajeCorrecto.classList.remove("mostrar-mensaje-correcto")
-        mensajeCorrecto.classList.add("ocultar-mensaje-correcto")
-      }, 5000);
-
+  try {
+    fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(contactoForm),
     })
-    .catch((error) => {
-      mensajeError.classList.add("mostrar-mensaje-error")
-      mensajeError.classList.remove("ocultar-mensaje-error")
+      .then((response) => response.json())
+      .then((data) => {
+        mensajeCorrecto.classList.add("mostrar-mensaje-correcto");
+        mensajeCorrecto.classList.remove("ocultar-mensaje-correcto");
 
-      setTimeout(() => {
-        mensajeError.classList.remove("mostrar-mensaje-error")
-        mensajeError.classList.add("ocultar-mensaje-error")
-      }, 5000);
-    });
+        setTimeout(() => {
+          mensajeCorrecto.classList.remove("mostrar-mensaje-correcto");
+          mensajeCorrecto.classList.add("ocultar-mensaje-correcto");
+        }, 5000);
+      })
+      .catch((error) => {
+        mensajeError.classList.add("mostrar-mensaje-error");
+        mensajeError.classList.remove("ocultar-mensaje-error");
+
+        setTimeout(() => {
+          mensajeError.classList.remove("mostrar-mensaje-error");
+          mensajeError.classList.add("ocultar-mensaje-error");
+        }, 5000);
+      });
+  } catch (error) {
+    mensajeError.classList.add("mostrar-mensaje-error");
+    mensajeError.classList.remove("ocultar-mensaje-error");
+
+    setTimeout(() => {
+      mensajeError.classList.remove("mostrar-mensaje-error");
+      mensajeError.classList.add("ocultar-mensaje-error");
+    }, 5000);
+  }
 };

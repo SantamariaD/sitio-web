@@ -12,9 +12,9 @@ paypal
       label: "pay",
       background: "white",
     },
-    // Call your server to set up the transaction
+    // Crea orden de transaccion
     createOrder: function (data, actions) {
-      return fetch("https://api-sitio-web.techcode.tech/api/paypal/generar-orden", {
+      return fetch(enviroments.urlBase + "/api/paypal/generar-orden", {
         method: "get",
       })
         .then(function (res) {
@@ -28,7 +28,7 @@ paypal
     // Call your server to finalize the transaction
     onApprove: function (data, actions) {
       return fetch(
-        "https://api-sitio-web.techcode.tech/api/paypal/guardar-orden/" + data.orderID,
+        enviroments.urlBase + "/api/paypal/guardar-orden/" + data.orderID,
         {
           method: "get",
         }

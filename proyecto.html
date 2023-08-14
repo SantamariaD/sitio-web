@@ -164,20 +164,32 @@
         </div>
         <ul class="menu-list">
           <li>
-            <a href="index.html">Home</a>
+            <a href="index.html" class="drop-down">Home</a>
           </li>
-          <li><a href="conocenos.html">Conócenos</a></li>
           <li>
-            <a href="service.html">Servicios</a>
+            <a href="servicios.html" class="drop-down">Servicios</a>
           </li>
           <li class="active">
-            <a href="proyecto.html">Software</a>
+            <a href="proyectos.html" class="drop-down">Proyectos</a>
           </li>
           <li>
-            <a href="pricing.html">Paquetes</a>
+            <a href="precios.html" class="drop-down">Paquetes</a>
           </li>
-          <li><a href="faq.html">FAQs</a></li>
-          <li><a href="blog.html">Blog</a></li>
+          <li class="menu-item-has-children">
+            <a class="drop-down">Empresa</a
+            ><i class="bi bi-plus dropdown-icon"></i>
+            <ul class="sub-menu">
+              <li><a href="conocenos.html">Conócenos</a></li>
+              <li><a href="faq.html" class="drop-down">FAQs</a></li>
+              <li><a href="blog.html" class="drop-down">Blog</a></li>
+            </ul>
+          </li>
+          <li>
+            <a class="autenticacion-movil" href="registro.html" class="drop-down">Registrarse</a>
+          </li>
+          <li>
+            <a class="autenticacion-movil" href="login.html" class="drop-down">Iniciar Sesión</a>
+          </li>
         </ul>
         <div class="d-lg-none d-block">
           <form class="mobile-menu-form">
@@ -201,8 +213,8 @@
                 </svg>
               </div>
               <div class="hotline-info">
-                <span>Call Us Now</span>
-                <h6><a href="tel:29658718617">2-965-871-8617</a></h6>
+                <span>Llamanos</span>
+                <h6><a href="tel:29658718617">55 4891 1226</a></h6>
               </div>
             </div>
             <div class="email pt-20 d-flex align-items-center">
@@ -221,15 +233,15 @@
                 </svg>
               </div>
               <div class="email-info">
-                <span>Email Now</span>
+                <span>Envianos un Email</span>
                 <h6>
-                  <a href="mailto:example@gmail.com">example@gmail.com</a>
+                  <a href="mailto:example@gmail.com">techcode.informacion@gmail.com</a>
                 </h6>
               </div>
             </div>
           </form>
           <div class="header-btn5">
-            <a class="primary-btn3" href="contact.html">Cotiza</a>
+            <a class="primary-btn3" href="contacto.html">Presupuesto</a>
           </div>
         </div>
       </div>
@@ -238,14 +250,10 @@
           <img src="assets/img/home-3/sidebar-btn.svg" alt="" />
         </div>
         <div class="header-btn d-xl-flex d-none">
-          <a class="primary-btn3" href="contact.html">Presupuesto</a>
+          <a class="primary-btn3" href="contacto.html">Presupuesto</a>
         </div>
-        <div class="header-btn d-xl-flex d-none">
-          <a class="primary-btn3" href="registro.html">Registrarse</a>
-        </div>
-        <div class="header-btn d-xl-flex d-none">
-          <a class="primary-btn3" href="contact.html">Login</a>
-        </div>
+        <a class="autenticacion" href="registro.html">Registrarse</a>
+        <a class="autenticacion" href="login.html">Login</a>
         <div class="sidebar-button mobile-menu-btn">
           <span></span>
         </div>
@@ -607,7 +615,7 @@
                   <li><a href="conocenos.html">Conócenos</a></li>
                   <li><a href="blog.html">Noticias y Articulos</a></li>
                   <li><a href="proyecto.html">Nuestra Aplicación</a></li>
-                  <li><a href="pricing.html">Precios</a></li>
+                  <li><a href="precios.html">Precios</a></li>
                 </ul>
               </div>
             </div>
@@ -622,7 +630,7 @@
                   <li><a href="#">Área de soporte</a></li>
                   <li><a href="#">Términos y condiciones</a></li>
                   <li><a href="#">Aviso de privacidad</a></li>
-                  <li><a href="pricing.html">Precios</a></li>
+                  <li><a href="precios.html">Precios</a></li>
                 </ul>
               </div>
             </div>
@@ -670,6 +678,7 @@
     <!-- End Footer section -->
 
     <!--PayPal-->
+    <script src="./assets/enviroments/enviroments.js"></script>
     <script src="./assets/js/paypal.js"></script>
     <!--  Main jQuery  -->
     <script src="assets/js/jquery-3.6.0.min.js"></script>

@@ -545,7 +545,7 @@ video {
       }
     }
     .header-logo {
-      padding: 25px 0;
+      padding: 0px 0;
     }
     .header-contact {
       @include xl-down-device {
@@ -601,9 +601,8 @@ video {
       }
     }
   }
-
   .header-logo {
-    padding: 15px 0;
+    padding: 0px 0;
   }
 
   .menu-close-btn {

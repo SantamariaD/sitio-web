@@ -6,7 +6,7 @@ const mensajeErrorContrasenas = document.getElementById(
 );
 
 const registrarUsuario = () => {
-  const url = "http://127.0.0.1:8000/api/autenticacion/registrar-usuario";
+  const url = enviroments.urlBase + "/api/autenticacion/registrar-usuario";
 
   const nombre = document.getElementById("nombre").value;
   const correo = document.getElementById("correo").value;
