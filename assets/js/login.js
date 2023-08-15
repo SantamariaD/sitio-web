@@ -25,12 +25,20 @@ const loginPeticion = () => {
     },
     body: JSON.stringify(loginRequest),
   })
-    .then((response) => response.json())
+    .then((response) => {
+      if (!response.ok) {
+        mensajeError.classList.remove("mostrar-mensaje-error-contra");
+        mensajeError.classList.add("ocultar-mensaje-error");
+        throw new Error(
+          `Error en la solicitud: ${response.status} intentar nuevamente`
+        );
+      }
+      return response.json();
+    })
     .then((data) => {
       document.getElementById("email").value = "";
       document.getElementById("password").value = "";
       spiner.classList.remove("spin-activo");
-      console.log(data);
 
       const idUsuario = data.usuario.id;
       const rol = data.usuario.rol;
@@ -45,11 +53,12 @@ const loginPeticion = () => {
       localStorage.setItem("username", username);
       localStorage.setItem("nombre", name);
       localStorage.setItem("token", token);
+
       login.classList.add("ocultar-autenticacion");
       registro.classList.add("ocultar-autenticacion");
       nombreUsuario.classList.add("mostrar-nombre-usuario");
-      nombreUsuario.innerHTML = name;
-      window.location.href = "https://techcode.tech";
+      nombreUsuario.innerHTML = username;
+      //window.location.href = "https://techcode.tech";
     })
     .catch((error) => {
       mensajeError.classList.remove("ocultar-mensaje-error");

@@ -1,6 +1,7 @@
 const login = document.getElementById("loginBoton");
 const registro = document.getElementById("registroBoton");
 const nombreUsuario = document.getElementById("nombreUsuario");
+const nombreUsuarioMovil = document.getElementById("nombreUsuarioMovil");
 
 const verificarLogin = () => {
   const idUsuario = localStorage.getItem("id");
@@ -10,6 +11,7 @@ const verificarLogin = () => {
     registro.classList.add("ocultar-autenticacion");
     nombreUsuario.classList.add("mostrar-nombre-usuario");
     nombreUsuario.innerHTML = "#"+localStorage.getItem("username");
+    nombreUsuarioMovil.innerHTML = "#"+localStorage.getItem("username");
   } else {
     login.classList.remove("ocultar-autenticacion");
     registro.classList.remove("ocultar-autenticacion");

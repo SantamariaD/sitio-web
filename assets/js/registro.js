@@ -6,11 +6,11 @@ const mensajeErrorContrasenas = document.getElementById(
 );
 
 const registrarUsuario = () => {
-  const url = enviroments.urlBase + "/api/autenticacion/registrar-usuario";
+  const url = enviroments.urlBaseAutenticacion + "/api/registrar-usuario";
 
   const nombre = document.getElementById("nombre").value;
   const correo = document.getElementById("correo").value;
-  const nombreUsuario = document.getElementById("nombreUsuario").value;
+  const nombreUsuario = document.getElementById("username").value;
   const contrasena = document.getElementById("contrasena").value;
   const spiner = document.getElementById("spiner");
 
@@ -30,13 +30,23 @@ const registrarUsuario = () => {
     },
     body: JSON.stringify(contactoForm),
   })
-    .then((response) => response.json())
+    .then((response) => {
+      if (!response.ok) {
+        mensajeError.classList.remove("mostrar-mensaje-error-contra");
+        mensajeError.classList.add("ocultar-mensaje-error");
+        throw new Error(
+          `Error en la solicitud: ${response.status} intentar nuevamente`
+        );
+      }
+      return response.json();
+    })
     .then((data) => {
+      console.log(data);
       mensajeCorrecto.classList.add("mostrar-mensaje-correcto");
       mensajeCorrecto.classList.remove("ocultar-mensaje-correcto");
       document.getElementById("nombre").value = "";
       document.getElementById("correo").value = "";
-      document.getElementById("nombreUsuario").value = "";
+      document.getElementById("username").value = "";
       document.getElementById("contrasena").value = "";
       document.getElementById("contrasenaRepetir").value = "";
       spiner.classList.remove("spin-activo");
@@ -60,7 +70,7 @@ const registrarUsuario = () => {
 const verificarContrasenas = () => {
   const nombre = document.getElementById("nombre").value;
   const correo = document.getElementById("correo").value;
-  const nombreUsuario = document.getElementById("nombreUsuario").value;
+  const nombreUsuario = document.getElementById("username").value;
   const contrasena = document.getElementById("contrasena").value;
   const contrasenaRepetir = document.getElementById("contrasenaRepetir").value;
 

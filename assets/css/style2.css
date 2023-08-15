@@ -12143,20 +12143,11 @@ footer .footer-btm .footer-btn-content .footer-social ul li a:hover {
   }
 }
 
-.autenticacion {
-  color: #9b51e0;
-}
-@media (max-width: 990px) {
-  .autenticacion {
-    display: none;
-  }
-}
-
-.header-area2 .main-menu ul > li .autenticacion-movil {
+.header-area2 .main-menu ul > .autenticacion-movil {
   display: block;
 }
 @media (min-width: 990px) {
-  .header-area2 .main-menu ul > li .autenticacion-movil {
+  .header-area2 .main-menu ul > .autenticacion-movil {
     display: none;
   }
 }
@@ -12194,7 +12185,30 @@ footer .footer-btm .footer-btn-content .footer-social ul li a:hover {
   font-size: 20px;
 }
 
+#nombreUsuarioMovil {
+  display: none;
+}
+
+.opciones-login {
+  position: absolute;
+  right: 20px;
+  top: 30px;
+  height: 60px;
+  padding: 5px;
+  background: white;
+}
+
 @media (max-width: 991px) {
+  #nombreUsuario, 
+  #registroBoton, 
+  #loginBoton {
+    display: none;
+  }
+
+  #nombreUsuarioMovil {
+    display: block;
+  }
+
   .barra-lateral-movi {
     height: auto;
     margin: auto;
@@ -12203,4 +12217,35 @@ footer .footer-btm .footer-btn-content .footer-social ul li a:hover {
   .login-form {
     width: 60%;
   }
+}
+
+.dropdown-login {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.dropdown-login-content {
+  padding: 7px;
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  background: white;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  font-size: 14px;
+}
+
+.dropdown-login-content:hover p {
+  color: #b573f2;
+}
+
+.dropdown-login:hover .dropdown-login-content {
+  display: block;
+}
+
+.dropdown-login-item {
+  padding: 10px 5px;
+  text-decoration: none;
+  display: block;
+  color: #b573f2;
 }
