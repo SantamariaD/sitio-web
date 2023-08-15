@@ -168,7 +168,7 @@
           <li>
             <a href="servicios.html" class="drop-down">Servicios</a>
           </li>
-          <li class="active">
+          <li>
             <a href="proyectos.html" class="drop-down">Proyectos</a>
           </li>
           <li>
@@ -245,9 +245,11 @@
         <div class="header-btn d-xl-flex d-none">
           <a class="primary-btn3" href="contacto.html">Presupuesto</a>
         </div>
-        <a style="color: #b573f2" href="registro.html">Registrarse</a>
+        <a id="registroBoton" style="color: #b573f2" href="registro.html">Registrarse</a>
 
-        <a style="color: #b573f2" href="login.html">Login</a>
+        <a id="loginBoton" style="color: #b573f2" href="login.html">Login</a>
+
+        <a id="nombreUsuario" style="color: #b573f2;" href="login.html"></a>
 
         <div class="sidebar-button mobile-menu-btn">
           <span></span>
@@ -258,121 +260,47 @@
 
     <!-- End breadcrumbs section -->
     <div class="contact-page-wrap sec-mar">
-      <div class="container">
-        <div class="row g-lg-4 gy-5">
-          <div class="col-lg-6">
-            <div class="contact-content">
-              <span>Realizá tu Registro</span>
-              <h2>¿Quieres más Software?</h2>
-              <p>
-                El registro de usuarios con nosotros ofrece beneficios
-                fundamentales. Permite una experiencia personalizada,
-                comunicación directa para actualizaciones y soporte,
-                implementación de medidas de seguridad sólidas, rastreo
-                eficiente de actividades y resolución de problemas. Esto
-                fortalece nuestra relación, optimizando nuestros servicios de
-                consultoría en tecnología de la información para satisfacer las
-                necesidades únicas de cada cliente.
-              </p>
-              <div class="follow-area">
-                <h5 class="blog-widget-title">Siguenos</h5>
-                <p class="para">Siguenos en Nuestras RedesSociales</p>
-                <div class="blog-widget-body">
-                  <ul
-                    class="follow-list d-flex flex-row align-items-start gap-4"
-                  >
-                    <li>
-                      <a href="https://www.facebook.com/"
-                        ><i class="bx bxl-facebook"></i
-                      ></a>
-                    </li>
-                    <li>
-                      <a href="https://www.instagram.com/"
-                        ><i class="bx bxl-instagram"></i
-                      ></a>
-                    </li>
-                  </ul>
+      <div class="login-form">
+        <div class="contact-form-wrap">
+          <div class="form-tltle">
+            <h5>Iniciar Sesión</h5>
+          </div>
+          <div class="contact-form">
+            <form id="formLogin">
+              <div class="row">
+                <div class="col-lg-12 mb-20">
+                  <div class="form-inner">
+                    <label>*Correo Electrónico</label>
+                    <input type="email" id="email" required />
+                  </div>
+                </div>
+                <div class="col-lg-12 mb-20">
+                  <div class="form-inner">
+                    <label>Contraseña</label>
+                    <input type="password" id="password" required />
+                  </div>
+                </div>
+                <p class="recordar-contrasena">
+                  <i class="fas fa-solid fa-lock"></i>
+                  Recordar contraseña
+                </p>
+                <p id="mensajeError" class="mensaje-error">
+                  Hubo un error intene nuevamente.
+                </p>
+                <div class="col-lg-12">
+                  <div class="form-inner">
+                    <button
+                      class="boton-desactivado"
+                      id="botonLogin"
+                      disabled
+                    >
+                      <span id="spiner" class="spin-button"></span>
+                      Iniciar Sesión
+                    </button>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="contact-form-wrap">
-              <div class="form-tltle">
-                <h5>Formulario de Registro</h5>
-              </div>
-              <div class="contact-form">
-                <form id="formContacto">
-                  <div class="row">
-                    <div class="col-lg-12 mb-20">
-                      <div class="form-inner">
-                        <label>*Nombre</label>
-                        <input type="text" id="nombre" required />
-                      </div>
-                    </div>
-                    <div class="col-lg-12 mb-20">
-                      <div class="form-inner">
-                        <label>*Correo Electrónico</label>
-                        <input type="email" id="correo" required />
-                      </div>
-                    </div>
-                    <div class="col-lg-12 mb-20">
-                      <div class="form-inner">
-                        <label
-                          >*Nombre de Usuario (Sin espacios ni
-                          caractéres)</label
-                        >
-                        <input type="text" id="nombreUsuario" required />
-                      </div>
-                    </div>
-                    <div class="col-lg-12 mb-20">
-                      <div class="form-inner">
-                        <label>*Contraseña</label>
-                        <input type="password" id="contrasena" required />
-                      </div>
-                    </div>
-                    <div class="col-lg-12 mb-20">
-                      <div class="form-inner">
-                        <label>*Repite la Contraseña</label>
-                        <input
-                          type="password"
-                          id="contrasenaRepetir"
-                          required
-                        />
-                      </div>
-                    </div>
-                    <div class="col-lg-12 mb-20">
-                      <div class="form-inner">
-                        <label>* Campos obligatorios</label>
-                      </div>
-                    </div>
-                    <p id="mensajeCorrecto" class="mensaje-correcto">
-                      <strong> !Registro Exitoso </strong><br />
-                      REcibiras un correo para verificar su cuenta.
-                    </p>
-                    <p id="mensajeError" class="mensaje-error">
-                      Hubo un error intene nuevamente.
-                    </p>
-
-                    <p id="mensajeErrorContrasenas" class="mensaje-error">
-                      No coinciden las contraseñas.
-                    </p>
-                    <div class="col-lg-12">
-                      <div class="form-inner">
-                        <button
-                          class="boton-desactivado"
-                          id="botonRegistrar"
-                          disabled
-                        >
-                          <span id="spiner" class="spin-button"></span>
-                          Registrarse
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </div>
+            </form>
           </div>
         </div>
       </div>
@@ -539,7 +467,9 @@
     <!-- End Footer section -->
 
     <!--  Registro JS  -->
-    <script src="assets/js/registro.js"></script>
+    <script src="assets/js/verificar-login.js"></script>
+    <script src="assets/enviroments/enviroments.js"></script>
+    <script src="assets/js/login.js"></script>
     <!--  Main jQuery  -->
     <script src="assets/js/jquery-3.6.0.min.js"></script>
     <!-- Popper and Bootstrap JS -->

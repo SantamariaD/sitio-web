@@ -165,7 +165,7 @@
       </div>
     </div>
     <!-- Start header section -->
-    <header class="header-area2">
+    <header class="header-area2" style="z-index: 1000">
       <div class="header-logo">
         <a href="index.html"
           ><img alt="image" class="img-fluid" src="assets/img/logo.svg"
@@ -185,7 +185,6 @@
           <li>
             <a href="index.html" class="drop-down">Home</a>
           </li>
-          <li><a href="conocenos.html">Conócenos</a></li>
           <li class="active">
             <a href="servicios.html" class="drop-down">Servicios</a>
           </li>
@@ -195,8 +194,15 @@
           <li>
             <a href="precios.html" class="drop-down">Paquetes</a>
           </li>
-          <li><a href="faq.html" class="drop-down">FAQs</a></li>
-          <li><a href="blog.html" class="drop-down">Blog</a></li>
+          <li class="menu-item-has-children">
+            <a href="#" class="drop-down">Empresa</a
+            ><i class="bi bi-plus dropdown-icon"></i>
+            <ul class="sub-menu">
+              <li><a href="conocenos.html">Conócenos</a></li>
+              <li><a href="faq.html" class="drop-down">FAQs</a></li>
+              <li><a href="blog.html" class="drop-down">Blog</a></li>
+            </ul>
+          </li>
         </ul>
         <div class="d-lg-none d-block">
           <form class="mobile-menu-form">
@@ -259,6 +265,12 @@
         <div class="header-btn d-xl-flex d-none">
           <a class="primary-btn3" href="contacto.html">Presupuesto</a>
         </div>
+        <a id="registroBoton" style="color: #b573f2" href="registro.html">Registrarse</a>
+
+        <a id="loginBoton" style="color: #b573f2" href="login.html">Login</a>
+
+        <a id="nombreUsuario" style="color: #b573f2;" href="login.html"></a>
+
         <div class="sidebar-button mobile-menu-btn">
           <span></span>
         </div>
@@ -777,6 +789,7 @@
     <!-- End Footer section -->
 
     <!--  Main jQuery  -->
+    <script src="assets/js/verificar-login.js"></script>
     <script src="assets/js/jquery-3.6.0.min.js"></script>
     <!-- Popper and Bootstrap JS -->
     <script src="assets/js/popper.min.js"></script>

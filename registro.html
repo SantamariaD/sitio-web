@@ -83,7 +83,7 @@
       </div>
     </div>
     <!-- Preloader End -->
-    <div class="header-sidebar">
+    <div class="header-sidebar" style="z-index: 1001">
       <div class="siderbar-top">
         <div class="sidebar-log">
           <a href="index.html"><img src="assets/img/logo.svg" alt="" /></a>
@@ -163,20 +163,26 @@
         </div>
         <ul class="menu-list">
           <li>
-            <a href="index.html">Home</a>
-          </li>
-          <li><a href="conocenos.html">Conócenos</a></li>
-          <li>
-            <a href="servicios.html">Servicios</a>
+            <a href="index.html" class="drop-down">Home</a>
           </li>
           <li>
-            <a href="proyecto.html">Software</a>
+            <a href="servicios.html" class="drop-down">Servicios</a>
           </li>
           <li>
-            <a href="precios.html">Paquetes</a>
+            <a href="proyectos.html" class="drop-down">Proyectos</a>
           </li>
-          <li><a href="faq.html">FAQs</a></li>
-          <li><a href="blog.html">Blog</a></li>
+          <li>
+            <a href="precios.html" class="drop-down">Paquetes</a>
+          </li>
+          <li class="menu-item-has-children">
+            <a href="#" class="drop-down">Empresa</a
+            ><i class="bi bi-plus dropdown-icon"></i>
+            <ul class="sub-menu">
+              <li><a href="conocenos.html">Conócenos</a></li>
+              <li><a href="faq.html" class="drop-down">FAQs</a></li>
+              <li><a href="blog.html" class="drop-down">Blog</a></li>
+            </ul>
+          </li>
         </ul>
         <div class="d-lg-none d-block">
           <form class="mobile-menu-form">
@@ -200,8 +206,8 @@
                 </svg>
               </div>
               <div class="hotline-info">
-                <span>Llamanos</span>
-                <h6><a href="tel:29658718617">55 4891 1226</a></h6>
+                <span>Call Us Now</span>
+                <h6><a href="tel:29658718617">2-965-871-8617</a></h6>
               </div>
             </div>
             <div class="email pt-20 d-flex align-items-center">
@@ -220,11 +226,9 @@
                 </svg>
               </div>
               <div class="email-info">
-                <span>Evianos un Email</span>
+                <span>Email Now</span>
                 <h6>
-                  <a href="mailto:techcode.informacion@gmail.com"
-                    >techcode.informacion@gmail.com</a
-                  >
+                  <a href="mailto:example@gmail.com">example@gmail.com</a>
                 </h6>
               </div>
             </div>
@@ -241,6 +245,14 @@
         <div class="header-btn d-xl-flex d-none">
           <a class="primary-btn3" href="contacto.html">Presupuesto</a>
         </div>
+        <a id="registroBoton" style="color: #b573f2" href="registro.html"
+          >Registrarse</a
+        >
+
+        <a id="loginBoton" style="color: #b573f2" href="login.html">Login</a>
+
+        <a id="nombreUsuario" style="color: #b573f2"></a>
+
         <div class="sidebar-button mobile-menu-btn">
           <span></span>
         </div>
@@ -340,15 +352,15 @@
                     </div>
                     <p id="mensajeCorrecto" class="mensaje-correcto">
                       <strong> !Registro Exitoso </strong><br />
-                      REcibiras un correo para verificar su cuenta.
+                      Recibiras un correo para verificar su cuenta.
                     </p>
                     <p id="mensajeError" class="mensaje-error">
                       Hubo un error intene nuevamente.
                     </p>
 
                     <p id="mensajeErrorContrasenas" class="mensaje-error">
-                        No coinciden las contraseñas.
-                      </p>
+                      No coinciden las contraseñas.
+                    </p>
                     <div class="col-lg-12">
                       <div class="form-inner">
                         <button
@@ -356,7 +368,7 @@
                           id="botonRegistrar"
                           disabled
                         >
-                        <span id="spiner" class="spin-button"></span>
+                          <span id="spiner" class="spin-button"></span>
                           Registrarse
                         </button>
                       </div>
@@ -531,6 +543,7 @@
     <!-- End Footer section -->
 
     <!--  Registro JS  -->
+    <script src="assets/js/verificar-login.js"></script>
     <script src="assets/js/registro.js"></script>
     <!--  Main jQuery  -->
     <script src="assets/js/jquery-3.6.0.min.js"></script>

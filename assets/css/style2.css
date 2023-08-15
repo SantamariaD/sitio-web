@@ -11696,11 +11696,6 @@ footer .footer-btm .footer-btn-content .footer-social ul li a:hover {
   position: relative;
   border-radius: 10px;
 }
-@media (min-width: 992px) {
-  .contact-page-wrap .contact-form-wrap {
-    margin-left: 25px;
-  }
-}
 .contact-page-wrap .contact-form-wrap .form-tltle {
   padding: 25px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
@@ -12131,7 +12126,7 @@ footer .footer-btm .footer-btn-content .footer-social ul li a:hover {
   width: 25px;
   cursor: pointer;
   margin-right: 7px;
-  animation: spin .7s linear infinite;
+  animation: spin 0.7s linear infinite;
   display: none;
 }
 
@@ -12151,17 +12146,61 @@ footer .footer-btm .footer-btn-content .footer-social ul li a:hover {
 .autenticacion {
   color: #9b51e0;
 }
-@media(max-width: 990px) {
+@media (max-width: 990px) {
   .autenticacion {
-   display: none;
+    display: none;
   }
 }
 
 .header-area2 .main-menu ul > li .autenticacion-movil {
   display: block;
 }
-@media(min-width: 990px) {
+@media (min-width: 990px) {
   .header-area2 .main-menu ul > li .autenticacion-movil {
-   display: none;
+    display: none;
+  }
+}
+
+.barra-lateral-movi {
+  height: 80px;
+  margin: auto;
+}
+
+.login-form {
+  width: 30%;
+  margin: 10px auto;
+}
+
+.recordar-contrasena {
+  color: white;
+  width: auto;
+  margin: 0px 0px 0px auto;
+}
+
+.recordar-contrasena:hover {
+  color: #9b51e0;
+  cursor: pointer;
+}
+
+.ocultar-autenticacion {
+  display: none;
+}
+
+.mostrar-nombre-usuario {
+  display: inline-block;
+}
+
+#nombreUsuario {
+  font-size: 20px;
+}
+
+@media (max-width: 991px) {
+  .barra-lateral-movi {
+    height: auto;
+    margin: auto;
+  }
+
+  .login-form {
+    width: 60%;
   }
 }
