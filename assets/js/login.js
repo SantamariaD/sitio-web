@@ -5,7 +5,7 @@ const mensajeErrorContrasenas = document.getElementById(
 );
 
 const loginPeticion = () => {
-  const url = "http://127.0.0.1:8000/api/autenticacion/login";
+  const url = enviroments.urlBase + "/api/autenticacion/login";
 
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;
