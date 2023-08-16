@@ -1,6 +1,6 @@
 const botonEnviar = document.getElementById("botonEnviar");
 const mensajeCorrecto = document.getElementById("mensajeCorrecto");
-const mensajeError = document.getElementById("mensajeError");
+const mensajeErrorContacto = document.getElementById("mensajeErrorContacto");
 
 botonEnviar.addEventListener("click", function (event) {
   event.preventDefault();

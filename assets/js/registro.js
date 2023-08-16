@@ -1,7 +1,7 @@
 const botonRegistrar = document.getElementById("botonRegistrar");
 const mensajeCorrecto = document.getElementById("mensajeCorrecto");
-const mensajeError = document.getElementById("mensajeError");
-const mensajeErrorContrasenas = document.getElementById(
+const mensajeErrorRegistro = document.getElementById("mensajeErrorRegistro");
+const mensajeErrorContrasenasRegistro = document.getElementById(
   "mensajeErrorContrasenas"
 );
 
@@ -90,7 +90,7 @@ const verificarContrasenas = () => {
   }
 };
 
-const verificarFormulario = () => {
+const verificarFormularioRegistro = () => {
   const nombre = document.getElementById("nombre").value;
   const correo = document.getElementById("correo").value;
   const nombreUsuario = document.getElementById("nombreUsuario").value;
@@ -116,13 +116,13 @@ document
   .addEventListener("input", verificarContrasenas);
 document
   .getElementById("nombre")
-  .addEventListener("input", verificarFormulario);
+  .addEventListener("input", verificarFormularioRegistro);
 document
   .getElementById("correo")
-  .addEventListener("input", verificarFormulario);
+  .addEventListener("input", verificarFormularioRegistro);
 document
   .getElementById("nombreUsuario")
-  .addEventListener("input", verificarFormulario);
+  .addEventListener("input", verificarFormularioRegistro);
 
 botonRegistrar.addEventListener("click", (event) => {
   event.preventDefault();

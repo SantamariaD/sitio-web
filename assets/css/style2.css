@@ -12177,15 +12177,19 @@ footer .footer-btm .footer-btn-content .footer-social ul li a:hover {
   display: none;
 }
 
-.mostrar-nombre-usuario {
-  display: inline-block;
-}
-
 #nombreUsuario {
   font-size: 20px;
 }
 
 #nombreUsuarioMovil {
+  display: none;
+}
+
+.mostrar-nombre-usuario {
+  display: inline-block;
+}
+
+.ocultar-nombre-usuario {
   display: none;
 }
 

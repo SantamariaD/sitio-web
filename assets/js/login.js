@@ -1,5 +1,6 @@
 const botonLogin = document.getElementById("botonLogin");
 const mensajeError = document.getElementById("mensajeError");
+const cerrarSesion = document.getElementById("cerrar-sesion");
 const mensajeErrorContrasenas = document.getElementById(
   "mensajeErrorContrasenas"
 );
@@ -57,7 +58,8 @@ const loginPeticion = () => {
       login.classList.add("ocultar-autenticacion");
       registro.classList.add("ocultar-autenticacion");
       nombreUsuario.classList.add("mostrar-nombre-usuario");
-      nombreUsuario.innerHTML = username;
+      nombreUsuario.classList.remove("ocultar-nombre-usuario");
+      nombreUsuario.innerHTML = "#" + username;
       //window.location.href = "https://techcode.tech";
     })
     .catch((error) => {
@@ -68,6 +70,47 @@ const loginPeticion = () => {
         mensajeError.classList.add("ocultar-mensaje-error");
       }, 5000);
     });
+};
+
+const cerrarSesionPeticion = () => {
+  const url = enviroments.urlBaseAutenticacion + "/api/autenticacion/logout";
+  const token = localStorage.getItem("token");
+
+  if (token) {
+    fetch(url, {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+      },
+    })
+      .then((response) => {
+        if (!response.ok) {
+          mensajeError.classList.remove("mostrar-mensaje-error-contra");
+          mensajeError.classList.add("ocultar-mensaje-error");
+          throw new Error(
+            `Error en la solicitud: ${response.status} intentar nuevamente`
+          );
+        }
+        return response.json();
+      })
+      .then((data) => {
+        localStorage.removeItem("id");
+        localStorage.removeItem("rol");
+        localStorage.removeItem("idRol");
+        localStorage.removeItem("username");
+        localStorage.removeItem("nombre");
+        localStorage.removeItem("token");
+
+        login.classList.remove("ocultar-autenticacion");
+        registro.classList.remove("ocultar-autenticacion");
+        nombreUsuario.classList.remove("mostrar-nombre-usuario");
+        nombreUsuario.classList.add("ocultar-nombre-usuario");
+        nombreUsuario.innerHTML = "";
+        //window.location.href = "https://techcode.tech";
+      })
+      .catch((error) => console.log(error));
+  }
 };
 
 const verificarFormulario = () => {
@@ -85,13 +128,32 @@ const verificarFormulario = () => {
   }
 };
 
+// EVENTOS
+
+/**
+ * @Evento Verifivan si las contraseñas son corretas
+ */
 document
   .getElementById("password")
   ?.addEventListener("input", verificarFormulario);
-document.getElementById("email")?.addEventListener("input", verificarFormulario);
+document
+  .getElementById("email")
+  ?.addEventListener("input", verificarFormulario);
 
+/**
+ * @Evento boton para iniciar sesión y hacer la peticion
+ */
 botonLogin?.addEventListener("click", (event) => {
   event.preventDefault();
 
   loginPeticion();
+});
+
+/**
+ * @Evento click en cerrar sesión de la barra de navegacion
+ */
+cerrarSesion?.addEventListener("click", (event) => {
+  event.preventDefault();
+
+  cerrarSesionPeticion();
 });
