@@ -60,7 +60,7 @@ const loginPeticion = () => {
       nombreUsuario.classList.add("mostrar-nombre-usuario");
       nombreUsuario.classList.remove("ocultar-nombre-usuario");
       nombreUsuario.innerHTML = "#" + username;
-      //window.location.href = "https://techcode.tech";
+      window.location.href = "https://techcode.tech";
     })
     .catch((error) => {
       mensajeError.classList.remove("ocultar-mensaje-error");
@@ -107,7 +107,6 @@ const cerrarSesionPeticion = () => {
         nombreUsuario.classList.remove("mostrar-nombre-usuario");
         nombreUsuario.classList.add("ocultar-nombre-usuario");
         nombreUsuario.innerHTML = "";
-        //window.location.href = "https://techcode.tech";
       })
       .catch((error) => console.log(error));
   }
