@@ -87,10 +87,10 @@ const verificarFormulario = () => {
 
 document
   .getElementById("password")
-  .addEventListener("input", verificarFormulario);
-document.getElementById("email").addEventListener("input", verificarFormulario);
+  ?.addEventListener("input", verificarFormulario);
+document.getElementById("email")?.addEventListener("input", verificarFormulario);
 
-botonLogin.addEventListener("click", (event) => {
+botonLogin?.addEventListener("click", (event) => {
   event.preventDefault();
 
   loginPeticion();
