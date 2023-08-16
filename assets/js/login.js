@@ -60,7 +60,7 @@ const loginPeticion = () => {
       nombreUsuario.classList.add("mostrar-nombre-usuario");
       nombreUsuario.classList.remove("ocultar-nombre-usuario");
       nombreUsuario.innerHTML = "#" + username;
-      window.location.href = "https://techcode.tech";
+      window.location.href = enviroments.urlBaseFron;
     })
     .catch((error) => {
       mensajeError.classList.remove("ocultar-mensaje-error");
