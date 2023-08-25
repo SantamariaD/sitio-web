@@ -5396,7 +5396,8 @@ video {
 
 .home3-success-stories-area {
   background: #1b1f23;
-  padding: 100px 8%;
+  padding: 20px 8%;
+  margin: 40px auto;
 }
 .home3-success-stories-area.two {
   background-color: transparent;
@@ -12203,8 +12204,8 @@ footer .footer-btm .footer-btn-content .footer-social ul li a:hover {
 }
 
 @media (max-width: 991px) {
-  #nombreUsuario, 
-  #registroBoton, 
+  #nombreUsuario,
+  #registroBoton,
   #loginBoton {
     display: none;
   }
@@ -12235,7 +12236,7 @@ footer .footer-btm .footer-btn-content .footer-social ul li a:hover {
   position: absolute;
   min-width: 160px;
   background: white;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   font-size: 14px;
 }
 
@@ -12252,4 +12253,17 @@ footer .footer-btm .footer-btn-content .footer-social ul li a:hover {
   text-decoration: none;
   display: block;
   color: #b573f2;
+}
+
+.boton-demo {
+  width: 100%;
+  margin: 15px auto;
+  background: #9b51e0;
+  color: white;
+  a {
+    width: 100%;
+    text-align: center;
+    color: white !important;
+    text-decoration: none !important;
+  }
 }
