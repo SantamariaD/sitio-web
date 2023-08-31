@@ -60,9 +60,6 @@ paypal
             return alert(msg); // Show a failure message (try to avoid alerts in production environments)
           }
 
-          // Successful capture! For demo purposes:
-          console.log("Capture result", orderData);
-
           modalPagoCorrecto.classList.add("mostrar-modal");
           modalPagoCorrecto.classList.remove("ocultar-modal");
           // Obtén una referencia al elemento, por ejemplo:

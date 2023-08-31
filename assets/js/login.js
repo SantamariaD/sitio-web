@@ -41,12 +41,12 @@ const loginPeticion = () => {
       document.getElementById("password").value = "";
       spiner.classList.remove("spin-activo");
 
-      const idUsuario = data.usuario.id;
-      const rol = data.usuario.rol;
-      const idRol = data.usuario.idRol;
-      const username = data.usuario.username;
-      const name = data.usuario.name;
-      const token = data.token;
+      const idUsuario = data.payload.usuario.id;
+      const rol = data.payload.usuario.rol;
+      const idRol = data.payload.usuario.idRol;
+      const username = data.payload.usuario.username;
+      const name = data.payload.usuario.name;
+      const token = data.payload.token;
 
       localStorage.setItem("id", idUsuario);
       localStorage.setItem("rol", rol);
@@ -60,7 +60,7 @@ const loginPeticion = () => {
       nombreUsuario.classList.add("mostrar-nombre-usuario");
       nombreUsuario.classList.remove("ocultar-nombre-usuario");
       nombreUsuario.innerHTML = "#" + username;
-      window.location.href = enviroments.urlBaseFron;
+      window.location.href = enviroments.urlBaseFron + '/sistema-administrativo.html';
     })
     .catch((error) => {
       mensajeError.classList.remove("ocultar-mensaje-error");

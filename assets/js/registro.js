@@ -41,7 +41,6 @@ const registrarUsuario = () => {
       return response.json();
     })
     .then((data) => {
-      console.log(data);
       mensajeCorrecto.classList.add("mostrar-mensaje-correcto");
       mensajeCorrecto.classList.remove("ocultar-mensaje-correcto");
       document.getElementById("nombre").value = "";

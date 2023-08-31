@@ -113,6 +113,10 @@ video {
 .sec-mar {
   margin: 120px 0;
 }
+
+.sec-mar2 {
+  margin: 40px 0;
+}
 @media (max-width: 991px) {
   .sec-mar {
     margin: 90px 0;
@@ -4306,8 +4310,12 @@ video {
 }
 
 .home4-pricing-plan {
-  background: #1b1f23;
+  background: #1d1d1d;
   padding: 100px 12%;
+}
+.home4-pricing-plan2 {
+  background: #0f0f0f;
+  padding: 20px 12% !important;
 }
 @media (min-width: 1400px) and (max-width: 1599px) {
   .home4-pricing-plan {
@@ -11994,14 +12002,6 @@ footer .footer-btm .footer-btn-content .footer-social ul li a:hover {
   color: rgb(94, 94, 94);
 }
 
-.mostrar-modal {
-  display: block;
-}
-
-.ocultar-modal {
-  display: none;
-}
-
 .modal-contenido-informacion {
   width: 90%;
   margin: 0px auto;
@@ -12266,4 +12266,93 @@ footer .footer-btm .footer-btn-content .footer-social ul li a:hover {
     color: white !important;
     text-decoration: none !important;
   }
+}
+
+.modal-sistema {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: all ease 0.7s;
+  display: none;
+}
+
+.modal-contenido-sistema {
+  width: 600px;
+  height: 370px;
+  background-color: #272727;
+  border-radius: 27px;
+  position: relative;
+  z-index: 10000;
+  border: 5px solid var(--theme-color);
+  margin: 100px auto 0px auto;
+  color: white;
+}
+
+.modal-contenido-sistema-cerrar:hover {
+  color: rgb(94, 94, 94);
+}
+
+.modal-contenido-sistema-informacion {
+  width: 90%;
+  margin: 0px auto;
+  padding: 0px 20px;
+}
+
+.modal-contenido-sistema-informacion-texto {
+  width: auto;
+  margin: 15px auto;
+  display: flex;
+  justify-content: center;
+}
+
+.modal-contenido-sistema-informacion-imagen {
+  width: 50px;
+  height: 50px;
+}
+
+.modal-contenido-sistema-informacion-gracia {
+  text-align: center;
+  font-size: 35px;
+  margin-left: 10px;
+  font-weight: 900px;
+  color: rgb(149, 149, 149);
+}
+
+.modal-contenido-sistema-informacion-parrafo {
+  width: 80%;
+  margin: 0px auto;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  color: rgb(149, 149, 149);
+}
+
+.modal-contenido-sistema-informacion-boton,
+.modal-contenido-sistema-informacion-boton button {
+  width: 250px;
+  font-size: 18px;
+  background: var(--theme-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin: 10px auto;
+}
+
+.info-suscripcion-form {
+  width: 100%;
+}
+
+.mostrar-modal {
+  display: block;
+}
+
+.ocultar-modal {
+  display: none;
 }
