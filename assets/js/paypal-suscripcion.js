@@ -25,6 +25,8 @@ const crearBase = (infoPago) => {
     })
     .then(function (base) {
       const fechas = obtenerFechas();
+      const token = localStorage.getItem('token');
+
       const requestCrearAdministrador = {
         idUsuario: localStorage.getItem("id"),
         subscriptionID: infoPago.subscriptionID,
@@ -35,6 +37,7 @@ const crearBase = (infoPago) => {
         facilitatorAccessToken: infoPago.facilitatorAccessToken,
         orderID: infoPago.orderID,
         paymentSource: infoPago.paymentSource,
+        token: token
       };
 
       crearSuscripcion(requestCrearAdministrador);
