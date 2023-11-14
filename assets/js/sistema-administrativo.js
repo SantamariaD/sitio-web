@@ -2,7 +2,12 @@ var paquete1 = document.getElementById("paquete1");
 var paquete2 = document.getElementById("paquete2");
 var paquete3 = document.getElementById("paquete3");
 var modalSistemaAdmin = document.getElementById("modalSistemaAdmin");
+var modalPago = document.getElementById("modalPago");
+var spin = document.getElementById("spin");
+var infoPago = document.getElementById("infoPago");
+var cerrarModalPagado = document.getElementById("cerrarModalPagado");
 var cerrarModalSistema = document.getElementById("cerrarModalSistema");
+var iniciarSistema = document.getElementById("iniciarSistema");
 var tipoSuscripcion = "";
 var idSuscripcion = "";
 
@@ -42,4 +47,9 @@ paquete3.addEventListener("click", () => {
 cerrarModalSistema?.addEventListener("click", () => {
   modalSistemaAdmin.classList.add("ocultar-modal");
   modalSistemaAdmin.classList.remove("mostrar-modal");
+});
+
+cerrarModalPagado?.addEventListener("click", () => {
+  modalPago.classList.add("ocultar-modal");
+  modalPago.classList.remove("mostrar-modal");
 });

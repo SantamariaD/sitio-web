@@ -11,6 +11,14 @@ paypal
       });
     },
     onApprove: function (data, actions) {
+      modalPago.classList.add("mostrar-modal");
+      modalPago.classList.remove("ocultar-modal");
+      spin.classList.add("mostrar-modal");
+      spin.classList.remove("ocultar-modal");
+      infoPago.classList.add("ocultar-modal");
+      infoPago.classList.remove("mostrar-modal");
+      modalSistemaAdmin.classList.add("ocultar-modal");
+      modalSistemaAdmin.classList.remove("mostrar-modal");
       crearBase(data);
     },
   })
@@ -56,8 +64,10 @@ const crearSuscripcion = (request) => {
       return res.json();
     })
     .then(function (respuestaSuscripcion) {
-      modalSistemaAdmin.classList.add("ocultar-modal");
-      modalSistemaAdmin.classList.remove("mostrar-modal");
+      spin.classList.add("ocultar-modal");
+      spin.classList.remove("mostrar-modal");
+      infoPago.classList.add("mostrar-modal");
+      infoPago.classList.remove("ocultar-modal");
     })
     .catch((error) => console.log(error));
 };

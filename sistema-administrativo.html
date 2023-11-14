@@ -505,6 +505,7 @@
         </div>
       </div>
     </div>
+
     <!--Modal de pagado-->
     <div id="modalSistemaAdmin" class="modal-sistema">
       <div class="modal-contenido-sistema">
@@ -524,7 +525,7 @@
           </div>
           <div id="paypal-button-container"></div>
           <div
-            id="cerrarModalSistema"
+            id="iniciarSistema"
             class="modal-contenido-sistema-informacion-boton"
           >
             <button>Cancelar</button>
@@ -532,6 +533,40 @@
         </div>
       </div>
     </div>
+
+    <div id="modalPago" class="modal-pagado">
+      <div class="modal-pagado-sistema">
+        <div id="infoPago" class="modal-pagado-sistema-informacion">
+          <div class="modal-pagado-sistema-informacion-texto">
+            <div class="modal-pagado-sistema-informacion-imagen">
+              <img src="./assets/img/modal/cheque.png" alt="pago correcto" />
+            </div>
+            <p class="modal-pagado-sistema-informacion-gracia">
+              ¡Gracias por tu suscripción!
+            </p>
+          </div>
+          <div
+            class="contact-form-wrap"
+            style="text-align: center; margin: 40px auto"
+          >
+            <div class="form-tltle">
+              <h5>Inicia sesión en el sistema</h5>
+            </div>
+          </div>
+          <div
+            id="cerrarModalPagado"
+            class="modal-pagado-sistema-informacion-boton"
+          >
+            <button>Iniciar</button>
+          </div>
+        </div>
+        <div id="spin" class="spin-contenedor">
+          <div class="spinner"></div>
+          <p class="creando">Creando Suscripción</p>
+        </div>
+      </div>
+    </div>
+
     <!-- Start Footer section -->
     <footer>
       <div class="footer-top">
