@@ -42,15 +42,10 @@ const loginPeticion = () => {
       spiner.classList.remove("spin-activo");
 
       const idUsuario = data.payload.usuario.id;
-      const rol = data.payload.usuario.rol;
-      const idRol = data.payload.usuario.idRol;
       const username = data.payload.usuario.username;
       const name = data.payload.usuario.name;
       const token = data.payload.token;
-
       localStorage.setItem("id", idUsuario);
-      localStorage.setItem("rol", rol);
-      localStorage.setItem("idRol", idRol);
       localStorage.setItem("username", username);
       localStorage.setItem("nombre", name);
       localStorage.setItem("token", token);
@@ -60,7 +55,7 @@ const loginPeticion = () => {
       nombreUsuario.classList.add("mostrar-nombre-usuario");
       nombreUsuario.classList.remove("ocultar-nombre-usuario");
       nombreUsuario.innerHTML = "#" + username;
-      window.location.href = enviroments.urlBaseFron + '/sistema-administrativo.html';
+      //window.location.href = enviroments.urlBaseFron + '/sistema-administrativo.html';
     })
     .catch((error) => {
       mensajeError.classList.remove("ocultar-mensaje-error");
@@ -101,6 +96,7 @@ const cerrarSesionPeticion = () => {
         localStorage.removeItem("username");
         localStorage.removeItem("nombre");
         localStorage.removeItem("token");
+        localStorage.removeItem("__paypal_storage__");
 
         login.classList.remove("ocultar-autenticacion");
         registro.classList.remove("ocultar-autenticacion");

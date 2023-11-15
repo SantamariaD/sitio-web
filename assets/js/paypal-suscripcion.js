@@ -45,7 +45,8 @@ const crearBase = (infoPago) => {
         facilitatorAccessToken: infoPago.facilitatorAccessToken,
         orderID: infoPago.orderID,
         paymentSource: infoPago.paymentSource,
-        token: token
+        token: token,
+        correo: localStorage.getItem("correo")
       };
 
       crearSuscripcion(requestCrearAdministrador);
