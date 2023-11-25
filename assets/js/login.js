@@ -49,6 +49,7 @@ const loginPeticion = () => {
       localStorage.setItem("username", username);
       localStorage.setItem("nombre", name);
       localStorage.setItem("token", token);
+      localStorage.setItem("correo", email);
 
       login.classList.add("ocultar-autenticacion");
       registro.classList.add("ocultar-autenticacion");
